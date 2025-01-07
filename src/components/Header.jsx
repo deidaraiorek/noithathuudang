@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
+import Logo from "../public/images/logoplain.png";
 export default function Header() {
   const router = useRouter();
   const [isAdmin, setIsAdmin] = useState(false);
@@ -47,7 +47,7 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <div className="h-24 w-24 relative">
               <Image
-                src="/images/logoplain.png"
+                src={Logo}
                 alt="Hữu Đăng Logo"
                 fill
                 style={{ objectFit: "contain" }}
