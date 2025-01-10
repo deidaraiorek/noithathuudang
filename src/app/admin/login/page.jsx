@@ -37,7 +37,10 @@ export default function AdminLogin() {
       <h1 className="text-2xl font-bold mb-4 text-[#8B4513]">Đăng nhập</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="username" className="block mb-1 text-[#8B4513]">
+          <label
+            htmlFor="username"
+            className="block mb-1 text-[#8B4513] font-medium"
+          >
             Tên đăng nhập
           </label>
           <input
@@ -47,12 +50,16 @@ export default function AdminLogin() {
             onChange={(e) => setUsername(e.target.value)}
             className="w-full px-4 py-2 border border-[#D2B48C] rounded-md 
                      focus:outline-none focus:ring-2 focus:ring-[#8B4513]
-                     bg-white/80"
+                     bg-white text-gray-800 placeholder-gray-500"
+            placeholder="Nhập tên đăng nhập"
             required
           />
         </div>
         <div>
-          <label htmlFor="password" className="block mb-1 text-[#8B4513]">
+          <label
+            htmlFor="password"
+            className="block mb-1 text-[#8B4513] font-medium"
+          >
             Mật khẩu
           </label>
           <input
@@ -62,16 +69,18 @@ export default function AdminLogin() {
             onChange={(e) => setPassword(e.target.value)}
             className="w-full px-4 py-2 border border-[#D2B48C] rounded-md 
                      focus:outline-none focus:ring-2 focus:ring-[#8B4513]
-                     bg-white/80"
+                     bg-white text-gray-800 placeholder-gray-500"
+            placeholder="Nhập mật khẩu"
             required
           />
         </div>
         <button
           type="submit"
           className="w-full px-4 py-2 bg-[#8B4513] text-white rounded-md 
-                   hover:bg-[#A0522D] focus:outline-none focus:ring-2 focus:ring-[#8B4513]"
+                   hover:bg-[#A0522D] focus:outline-none focus:ring-2 
+                   focus:ring-[#8B4513] transition-colors font-medium"
         >
-          Login
+          Đăng nhập
         </button>
       </form>
     </div>
